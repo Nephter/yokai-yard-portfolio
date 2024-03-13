@@ -6,20 +6,16 @@ import { Separator } from './ui/separator'
 const Bio = () => {
   return (
     <div className="flex justify-center space-x-4">
-      <div className="p-4 relative"
-        style={{
-          boxShadow: 'inset 0 7px 8px rgba(0, 0, 0, 0.6)',
-          backgroundColor: 'rgba(0, 0, 0, 0.2)'
-        }}>
-        <Image
-          src={'/bgTop.png'}
-          alt="Top Part of Background"
-          width={288}
-          height={450}
-          layout='fixed'
-        // objectFit='cover' 
-        />
-      </div>
+
+      <Image
+        src={'/bgTop.png'}
+        alt="Top Part of Background"
+        width={288}
+        height={450}
+        style={{ borderRadius: 4 }}
+      // objectFit='cover' 
+      />
+
       <div
         className="flex-col flex space-y-4 text-center w-72 justify-center align-center rounded-sm text-white"
         style={{
@@ -47,7 +43,7 @@ const Bio = () => {
             height={30}
           />
         </div>
-        <p>
+        <p className={`${kaushan.className}`}>
           Embodying the elegance and precision of the katana to craft bespoke digital experiences.
         </p>
       </div>
@@ -57,8 +53,8 @@ const Bio = () => {
         alt="Top Part of Background"
         width={288}
         height={288}
-      // layout='intrinsic'
-      // objectFit='contain'
+        style={{ borderRadius: 4 }}
+
       />
 
     </div>

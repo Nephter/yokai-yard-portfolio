@@ -7,19 +7,19 @@ import { Badge } from './ui/badge'
 
 const Work = () => {
   return (
-    <div className="  flex space-x-6 justify-center h-[400px] border">
-      {/* <Image
+    <div className="flex space-x-6 justify-center h-[400px]">
+      <Image
         src={'/symbols/lantern.png'}
         alt="Top Part of Background"
-        width={288}
-        height={288}
+        width={200}
+        height={200}
       // layout='intrinsic'
       // objectFit='contain'
-      /> */}
+      />
       <Link href="https://dashboard.landsplits.com/properties">
-        <Card className="w-72 h-full rounded-sm border-none text-white"
+        <Card className="w-72 h-full rounded-sm border-none text-white "
           style={{
-            boxShadow: '0 7px 8px rgba(0, 0, 0, 0.6)',
+            boxShadow: '4px 6px 8px rgba(0, 0, 0, 0.8)',
             backgroundColor: 'rgba(0, 0, 0, 0.2)'
           }}
         >
@@ -32,10 +32,17 @@ const Work = () => {
             <div>
               <p>Use Crypto to invest in real estate instantly</p>
             </div>
-            <div className="flex space-x-1">
-              <Badge>Next.js</Badge>
-              <Badge>Tailwind</Badge>
-              <Badge>Supabase</Badge>
+            <div className='flex flex-col space-y-2'>
+              <div className="flex space-x-1">
+                <Badge>Next</Badge>
+                <Badge>Tailwind</Badge>
+                <Badge>Supabase</Badge>
+              </div>
+              <div className="flex space-x-1">
+                <Badge>React</Badge>
+                <Badge>Typescript</Badge>
+                <Badge>Node</Badge>
+              </div>
             </div>
           </CardContent>
         </Card>
@@ -44,7 +51,8 @@ const Work = () => {
       <Link href="https://www.snowcones.io/">
         <Card className="w-72 h-full rounded-sm border-none text-white"
           style={{
-            boxShadow: '0 7px 8px rgba(0, 0, 0, 0.6)',
+            boxShadow: '4px 6px 8px rgba(0, 0, 0, 0.8)',
+
             backgroundColor: 'rgba(0, 0, 0, 0.2)'
           }}
         >
@@ -69,7 +77,8 @@ const Work = () => {
       <Link href="https://kit.snowcones.io/">
         <Card className="w-72 h-full rounded-sm border-none text-white"
           style={{
-            boxShadow: '0 7px 8px rgba(0, 0, 0, 0.6)',
+            boxShadow: '4px 6px 8px rgba(0, 0, 0, 0.8)',
+
             backgroundColor: 'rgba(0, 0, 0, 0.2)'
           }}
         >
@@ -90,14 +99,14 @@ const Work = () => {
           </CardContent>
         </Card>
       </Link>
-      {/* <Image
+      <Image
         src={'/symbols/lantern.png'}
         alt="Top Part of Background"
-        width={288}
-        height={288}
+        width={200}
+        height={200}
       // layout='intrinsic'
       // objectFit='contain'
-      /> */}
+      />
     </div>
   )
 }

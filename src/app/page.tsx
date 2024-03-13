@@ -1,57 +1,41 @@
-import Image from "next/image";
 import Bio from "(/components/Bio)";
 import CustomSeparator from "(/components/CustomSeparator)";
-import Work from "(/components/Work)";
 import ExperienceCards from "(/components/ExperienceCards)";
+import Work from "(/components/Work)";
+import { Card } from "(/components/ui/card)";
+import { kaushan } from "(/lib/fonts)";
+import Image from "next/image";
 
 export default function Home() {
-
   return (
-    <div className="">
-      {/* Top Image Container */}
-      <div className="relative w-full h-[76vh]">
+    <div className="relative min-h-screen flex items-center justify-center">
+      {/* Full-screen background image container */}
+      <div className="absolute inset-0 z-0">
         <Image
-          src="/bg3.png"
-          alt="Top Part of Background"
-          layout='fill'
-          objectFit='cover' // Adjust how the image fits within the container
+          src="/bg.png"
+          alt="Background"
+          layout="fill"
+          objectFit="cover"
+          className="min-h-[170vh]"
         />
       </div>
 
-      <div className="relative z-10 -top-5 px-20">
-        <CustomSeparator src={'/yArch.png'} />
-      </div>
+      <div className="z-10 w-full flex justify-center mt-[65vh]">
+        <Card className="relative flex flex-col items-center justify-center p-6 bg-[#020716] border-none space-y-14 ">
+          {/* <Card className="z-10 absolute top-3/4 -mt-32 flex flex-col items-center justify-center p-6 bg-[#020716] border-none space-y-14"> */}
+          <Bio />
+          <div className="w-[900px] mx-auto">
+            <CustomSeparator src={'/yArch.png'} />
+          </div>
+          <h1 className={`${kaushan.className} text-white text-3xl`}>Recent Work</h1>
 
-      <div className="w-full relative flex flex-col space-y-8 bg-[#020716]">
+          <Work />
 
-        <Bio />
-
-        {/* <div className="w-[880px] mx-auto">
-          <CustomSeparator src={'/yArch.png'} />
-        </div>
-
-        <ExperienceCards /> */}
-
-        <div className="w-[880px] mx-auto">
-          <CustomSeparator src={'/yArch.png'} />
-        </div>
-
-        <Work />
-
-        <div className="w-[880px] mx-auto">
-          <CustomSeparator src={'/yArch.png'} />
-        </div>
-
-      </div>
-
-      {/* Bottom Image Container */}
-      <div className="relative w-full h-[50vh]">
-        <Image
-          src="/bgBottom.png"
-          alt="Bottom Part of Background"
-          layout='fill'
-          objectFit='cover' // Adjust how the image fits within the container
-        />
+          <div className="w-[900px] mx-auto">
+            <CustomSeparator src={'/yArch.png'} />
+          </div>
+          <ExperienceCards />
+        </Card>
       </div>
     </div>
   );

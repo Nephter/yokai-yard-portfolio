@@ -72,5 +72,10 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-color: black;
   }
+}
+
+.custom-shadow {
+  box-shadow: 0 0 60px rgba(255, 0, 0, 0.3);
 }

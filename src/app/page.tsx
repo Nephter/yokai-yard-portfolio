@@ -1,3 +1,4 @@
+'use client'
 import Bio from "(/components/Bio)";
 import CustomSeparator from "(/components/CustomSeparator)";
 import ExperienceCards from "(/components/ExperienceCards)";
@@ -5,38 +6,92 @@ import Work from "(/components/Work)";
 import { Card } from "(/components/ui/card)";
 import { kaushan } from "(/lib/fonts)";
 import Image from "next/image";
+import { Parallax } from "react-scroll-parallax";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen flex items-center justify-center">
-      {/* Full-screen background image container */}
-      <div className="absolute inset-0 z-0">
+    <div className="">
+
+      <div className="container relative px-0 h-[100vh] border-red-600  custom-shadow">
         <Image
-          src="/bg.png"
-          alt="Background"
+          src={'/background/background.png'}
+          alt="background"
           layout="fill"
-          objectFit="cover"
-          className="min-h-[170vh]"
+          style={{ position: 'absolute', top: '0', right: '0', zIndex: -1, transform: 'rotate(0.5turn)' }}
         />
+        <Parallax speed={-15}>
+          <Image
+            src={'/background/moon.png'}
+            alt="moon"
+            width={800}
+            height={800}
+            // priority={false}
+            style={{ position: 'absolute', top: '-200px', right: '0', zIndex: 11 }}
+          />
+        </Parallax>
+        {/* <Image
+          src={'/background/background-moon.png'}
+          alt="background"
+          fill
+          style={{ position: 'absolute', top: '0', right: '0', zIndex: -1 }}
+        /> */}
+
+        {/* --- 1 --- */}
+        <div className="absolute bottom-[50px] w-full"
+          style={{
+            // paddingTop: '56.25%',
+            height: '600px',
+          }}>
+          <Image
+            src={'/background/wave3.png'}
+            alt="background"
+            fill
+          />
+        </div>
+
+        {/* --- 2 --- */}
+        <div className="absolute -bottom-[100px] w-full -scale-x-100"
+          style={{
+            // paddingTop: '56.25%',
+            height: '600px',
+          }}>
+          <Image
+            src={'/background/wave4.png'}
+            alt="background"
+            fill
+          />
+        </div>
+
+        {/* --- 3 --- */}
+        <div className="absolute -bottom-[200px] w-full"
+          style={{
+            // paddingTop: '56.25%',
+            height: '600px',
+          }}>
+          <Image
+            src={'/background/wave1.png'}
+            alt="background"
+            fill
+          />
+        </div>
+
+        {/* --- 4 --- */}
+        <div className="absolute -bottom-[340px] w-full"
+          style={{
+            // paddingTop: '56.25%',
+            height: '600px',
+          }}>
+          <Image
+            src={'/background/wave2.png'}
+            alt="background"
+            fill
+          />
+        </div>
+
+
       </div>
 
-      <div className="z-10 w-full flex justify-center mt-[65vh]">
-        <Card className="relative flex flex-col items-center justify-center p-6 bg-[#020716] border-none space-y-14 ">
-          {/* <Card className="z-10 absolute top-3/4 -mt-32 flex flex-col items-center justify-center p-6 bg-[#020716] border-none space-y-14"> */}
-          <Bio />
-          <div className="w-[900px] mx-auto">
-            <CustomSeparator src={'/yArch.png'} />
-          </div>
-          <h1 className={`${kaushan.className} text-white text-3xl`}>Recent Work</h1>
-
-          <Work />
-
-          <div className="w-[900px] mx-auto">
-            <CustomSeparator src={'/yArch.png'} />
-          </div>
-          <ExperienceCards />
-        </Card>
-      </div>
+      <div className="pb-[100vh]" />
     </div>
   );
 }

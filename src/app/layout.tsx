@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { inter } from "../lib/fonts";
+import { Provider } from "./provider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,15 +15,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}   bg-[#020716]`}>
+      <body className={`${inter.className}`}>
         <main>
 
           <div className="w-full">
-            {children}
+            <Provider >
+              {children}
+            </Provider>
           </div>
-        </main>
 
+        </main>
       </body>
     </html>
   );
 }
+// bg - [#020716]

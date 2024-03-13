@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      scale: {
+        '-100': '-1',
+      },
       backgroundImage: {
         'gradient-custom': 'linear-gradient(to right, #a1c4fd, #c2e9fb)',
       },

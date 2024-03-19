@@ -4,20 +4,25 @@ import Link from 'next/link'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from './ui/card'
 import { kaushan } from '(/lib/fonts)'
 import { Badge } from './ui/badge'
+import { useParallax } from 'react-scroll-parallax'
+import { parallaxEffects } from '(/app/parallaxEffects)'
 
 const Work = () => {
+  // const cards = useParallax<HTMLDivElement>({
+  //   speed: 20,
+  //   startScroll: 0,
+  //   endScroll: 250
+  // })
+  // const work = useParallax<HTMLDivElement>({
+  //   speed: 20,
+
+  // })
   return (
-    <div className="flex space-x-6 justify-center h-[400px]">
-      <Image
-        src={'/symbols/lantern.png'}
-        alt="Top Part of Background"
-        width={200}
-        height={200}
-      // layout='intrinsic'
-      // objectFit='contain'
-      />
+
+
+    <div className="flex justify-around h-[250px] relative w-full border">
       <Link href="https://dashboard.landsplits.com/properties">
-        <Card className="w-72 h-full rounded-sm border-none text-white "
+        <Card className="w-72 h-full rounded-sm border-none text-white hover:scale-105"
           style={{
             boxShadow: '4px 6px 8px rgba(0, 0, 0, 0.8)',
             backgroundColor: 'rgba(0, 0, 0, 0.2)'
@@ -99,15 +104,11 @@ const Work = () => {
           </CardContent>
         </Card>
       </Link>
-      <Image
-        src={'/symbols/lantern.png'}
-        alt="Top Part of Background"
-        width={200}
-        height={200}
-      // layout='intrinsic'
-      // objectFit='contain'
-      />
+
     </div>
+
+
+
   )
 }
 

@@ -79,3 +79,29 @@
 .custom-shadow {
   box-shadow: 0 0 60px rgba(255, 0, 0, 0.3);
 }
+
+/* Styles to hide the scrollbar */
+.scrollbar-hide-wrapper {
+  overflow: hidden; /* Hide overflow (including the scrollbar) */
+  width: 100%; /* Full width */
+  height: 100vh; /* Full viewport height */
+}
+
+.container {
+  overflow-y: auto; /* Enable vertical scrolling */
+  height: 100vh; /* Full viewport height */
+  scrollbar-width: none; /* For Firefox */
+}
+
+.container::-webkit-scrollbar {
+  display: none; /* For WebKit browsers like Chrome and Safari */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}

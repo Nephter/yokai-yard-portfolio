@@ -18,7 +18,7 @@ export default function RootLayout({
       <body className={`${inter.className}`}>
         <main>
 
-          <div className="w-full">
+          <div className="w-full hide-scrollbar">
             <Provider >
               {children}
             </Provider>
@@ -29,4 +29,4 @@ export default function RootLayout({
     </html>
   );
 }
-// bg - [#020716]
+

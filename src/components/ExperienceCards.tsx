@@ -9,16 +9,7 @@ import { Button } from './ui/button'
 
 const ExperienceCards = () => {
   return (
-    <div className="flex space-x-4 max-h-[400px]">
-
-      <Image
-        src={'/symbols/lantern.png'}
-        alt="Top Part of Background"
-        width={200}
-        height={200}
-      // layout='intrinsic'
-      // objectFit='contain'
-      />
+    <div className="flex space-x-4 ">
 
       <Card
         className="w-[600px] rounded-sm border-none text-white"
@@ -54,9 +45,39 @@ const ExperienceCards = () => {
               </AccordionContent>
             </AccordionItem>
           </Accordion>
+          <Accordion type="single" collapsible >
+            <AccordionItem value="item-1" className="border-hidden">
+              <AccordionTrigger className="pb-0">Typescript</AccordionTrigger>
+              <AccordionContent >
+                <p className="pt-2">
+                  10 yrs experience
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+          <Accordion type="single" collapsible >
+            <AccordionItem value="item-1" className="border-hidden">
+              <AccordionTrigger className="pb-0">Typescript</AccordionTrigger>
+              <AccordionContent >
+                <p className="pt-2">
+                  10 yrs experience
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+          <Accordion type="single" collapsible >
+            <AccordionItem value="item-1" className="border-hidden">
+              <AccordionTrigger className="pb-0">Typescript</AccordionTrigger>
+              <AccordionContent >
+                <p className="pt-2">
+                  10 yrs experience
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
 
         </CardContent>
-        <CardFooter className="flex justify-end">
+        {/* <CardFooter className="flex justify-end">
           <Dialog>
             <DialogTrigger className="flex justify-center">
               <Button>
@@ -79,18 +100,9 @@ const ExperienceCards = () => {
               </DialogHeader>
             </DialogContent>
           </Dialog>
-        </CardFooter>
+        </CardFooter> */}
       </Card>
 
-
-      <Image
-        src={'/symbols/lantern.png'}
-        alt="Top Part of Background"
-        width={200}
-        height={200}
-      // layout='intrinsic'
-      // objectFit='contain'
-      />
     </div>
 
 
